@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Demano Demo</title>
+
+    <script
+            src="https://code.jquery.com/jquery-2.2.4.js"
+            integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+            crossorigin="anonymous"></script>
+
+    <script src="../js/main/jquery.demano.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#container").demano({debug_element_id: "filters_text"});
+        });
+    </script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="container">
+
+    <div class="filters">
+        <label for="a">
+            <input id="a" class="filter" type="checkbox" name="a" data-attribute="category" data-value="Group 1"
+                   data-group="cats"/> Group 1</label>
+        <label for="b">
+            <input id="b" class="filter" type="checkbox" name="b" data-attribute="category" data-value="Group 2"
+                   data-group="cats"/> Group 1</label>
+        &nbsp;||&nbsp;
+        <label for="chrome">
+            <input id="chrome" class="filter" type="checkbox" name="chrome" data-attribute="browser" data-value="Chrome"
+                   data-group="brw"/> Chrome</label>
+        <label for="firefox">
+            <input id="firefox" class="filter" type="checkbox" name="firefox" data-attribute="browser"
+                   data-value="Firefox"
+                   data-group="brw"/> Firefox</label>
+    </div>
+
+    <div class="items">
+    <div data-category="Group 1" data-browser="Chrome" class="filterable">
+Group 1 - Chrome - DEV
+    </div>
+
+        <div data-category="Group 1" data-browser="Firefox" class="filterable">
+Group 1 - Firefox - STG
+</div>
+
+        <div data-category="Group 2" data-browser="Firefox" class="filterable">
+Group 2 - Firefox - STG
+</div>
+
+        <div data-category="Group 2" data-browser="Chrome" class="filterable">
+Group 2 - Chrome - STG
+</div>
+
+    </div>
+
+    <div style="clear: both"></div>
+</div>
+<hr/>
+<div id="filters_text" style='border: 1px solid red'>
+
+</div>
+
+</body>
+</html>

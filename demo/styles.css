@@ -1,0 +1,19 @@
+.filterable {
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px;
+    margin-bottom: 1em;
+    float: left;
+}
+
+.off {
+    background-color: #F9A39A;
+}
+
+.on {
+    background-color: #A3F99A;
+}
+
+.filters {
+    margin: 1em;
+}
