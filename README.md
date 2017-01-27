@@ -25,7 +25,9 @@ Demano is a JQuery plugin to assist multiple filtering options on a page.  The g
 There are 2 easy demos, to see this in action you can view the [lcoal demo](https://jsfiddle.net/mbaranski/q2rarzfn/ "Demano Example") or you can see an interactive demo at [jsfiddle.net](https://jsfiddle.net/mbaranski/q2rarzfn/ "JSFiddle Demano")
 ## Installation ##
 
-Install however you choose.
+`bower install demano`
+
+Install however else you choose.  The only dependency is `jquery.demano.js` in the `js/main` directory of this repo.
 
 ## Usage ##
 
