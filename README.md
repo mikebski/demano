@@ -18,11 +18,11 @@ limitations under the License.
 
 ## About ##
 
-Demano is a JQuery plugin to assist multiple filtering options on a page.  The general idea is that you create groups of filters and have a number of objects on the page that have CSS styles applied to them based on the filter selections.  See the [local demo](js/demo/demo.html "Demano Example") for an example.
+Demano is a JQuery plugin to assist multiple filtering options on a page.  The general idea is that you create groups of filters and have a number of objects on the page that have CSS styles applied to them based on the filter selections.  See the [local demo](https://jsfiddle.net/mbaranski/q2rarzfn/ "Demano Example") for an example.
 
 ## Demos ##
 
-There are 2 easy demos, to see this in action you can view the [lcoal demo](js/demo/demo.html "Demano Example") or you can see an interactive demo at [jsfiddle.net](https://jsfiddle.net/mbaranski/q2rarzfn/ "JSFiddle Demano")
+There are 2 easy demos, to see this in action you can view the [lcoal demo](https://jsfiddle.net/mbaranski/q2rarzfn/ "Demano Example") or you can see an interactive demo at [jsfiddle.net](https://jsfiddle.net/mbaranski/q2rarzfn/ "JSFiddle Demano")
 ## Installation ##
 
 Install however you choose.
@@ -59,7 +59,7 @@ The filter, when checked, will find all of the `filterable` elements with a matc
 	<div class="filterable" data-category="Group 1"> b </div>
 	<div class="filterable" data-category="Group 2"> c </div>
 
-See the [lcoal demo](js/demo/demo.html "Demano Example") for an example.
+See the [lcoal demo](https://jsfiddle.net/mbaranski/q2rarzfn/ "Demano Example") for an example.
 
 ## Configuration Options
 The following options are available.  Pass them as an object to the `demano` function, or use the (IMO) sensible default values
@@ -73,4 +73,4 @@ The following options are available.  Pass them as an object to the `demano` fun
 | `group_name` | String | `group` | The group name of this filter to create logical `OR` conditions with other filters that have the same group |
 | `toggle_class_matched` | String | `on` | Class to assign to `filterable` elements that are matches |
 | `toggle_class_nomatched` | String | `off` | Class to assign to `filterable` elements that are not matches |
-| `debug_element_id` | String | `null` | ID of an element to display the JSON value of the current filter state.  Helpful for debugging and defaults to `null`.  The [lcoal demo](js/demo/demo.html "Demano Example") uses this feature |
+| `debug_element_id` | String | `null` | ID of an element to display the JSON value of the current filter state.  Helpful for debugging and defaults to `null`.  The [lcoal demo](https://jsfiddle.net/mbaranski/q2rarzfn/ "Demano Example") uses this feature |
