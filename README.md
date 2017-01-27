@@ -23,6 +23,15 @@ Demano is a JQuery plugin to assist multiple filtering options on a page.  The g
 ## Demos ##
 
 There are 2 easy demos, to see this in action you can view the [lcoal demo](https://jsfiddle.net/mbaranski/q2rarzfn/ "Demano Example") or you can see an interactive demo at [jsfiddle.net](https://jsfiddle.net/mbaranski/q2rarzfn/ "JSFiddle Demano")
+
+## Quickstart ##
+
+`bower install demano` to install, then include `jquery.demano.js` in your script.  Make sure you also include JQuery.
+
+Use demano by putting all your filters and filterable items inside a containing element with an id, and then do `$("#container_div_id").demano()`
+
+That's it.
+
 ## Installation ##
 
 `bower install demano`
