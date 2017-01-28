@@ -51,8 +51,8 @@
             all = $(all).filter(v);
         });
 
-        $(".filterable").removeClass(toggle_class_matched);
-        $(".filterable").addClass(toggle_class_nomatched);
+        $("." + filterable_class).removeClass(toggle_class_matched);
+        $("." + filterable_class).addClass(toggle_class_nomatched);
 
         $(all).removeClass(toggle_class_nomatched);
         $(all).addClass(toggle_class_matched);
@@ -60,7 +60,6 @@
     }
 
     $.fn.demano = function(config) {
-        //return this.each(function() {
         root_element = this;
         config = config || {};
         filter_class = config.filter_class || "filter";
@@ -73,9 +72,7 @@
         debug_element_id = config.debug_element_id || null;
         registerListeners();
         doFilter();
-        //});
         return this;
     };
 }(jQuery));
 
-$(".container").demano({debug_element_id: "filters_text"});

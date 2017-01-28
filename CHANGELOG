@@ -1,0 +1,9 @@
+1.0.1
+
+* Initial version, refactored project
+
+1.0.2
+
+* Bugfix - Remove call to plugin in plugin file
+* Bugfix - Fix selector using hard-coded "filterable" instead of option
+* Added CHANGELOG
