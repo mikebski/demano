@@ -7,3 +7,9 @@
 * Bugfix - Remove call to plugin in plugin file
 * Bugfix - Fix selector using hard-coded "filterable" instead of option
 * Added CHANGELOG
+
+1.0.3
+
+* Make plugin stateful
+* Update options to use extend
+* Search only in children of element
