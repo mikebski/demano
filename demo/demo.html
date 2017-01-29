@@ -21,14 +21,13 @@
 </head>
 <body>
 <div id="container">
-
     <div class="filters">
         <label for="a">
             <input id="a" class="filter" type="checkbox" name="a" data-attribute="category" data-value="Group 1"
                    data-group="cats"/> Group 1</label>
         <label for="b">
             <input id="b" class="filter" type="checkbox" name="b" data-attribute="category" data-value="Group 2"
-                   data-group="cats"/> Group 1</label>
+                   data-group="cats"/> Group 2</label>
         &nbsp;||&nbsp;
         <label for="chrome">
             <input id="chrome" class="filter" type="checkbox" name="chrome" data-attribute="browser" data-value="Chrome"
@@ -40,28 +39,26 @@
     </div>
 
     <div class="items">
-    <div data-category="Group 1" data-browser="Chrome" class="filterable">
-Group 1 - Chrome - DEV
-    </div>
+        <div data-category="Group 1" data-browser="Chrome" class="filterable">
+            Group 1 - Chrome - DEV
+        </div>
 
         <div data-category="Group 1" data-browser="Firefox" class="filterable">
-Group 1 - Firefox - STG
-</div>
+            Group 1 - Firefox - STG
+        </div>
 
         <div data-category="Group 2" data-browser="Firefox" class="filterable">
-Group 2 - Firefox - STG
-</div>
+            Group 2 - Firefox - STG
+        </div>
 
         <div data-category="Group 2" data-browser="Chrome" class="filterable">
-Group 2 - Chrome - STG
-</div>
+            Group 2 - Chrome - STG
+        </div>
 
     </div>
-
     <div style="clear: both"></div>
+    <div id="filters_text" style='border: 1px solid red'>
 </div>
-<hr/>
-<div id="filters_text" style='border: 1px solid red'>
 
 </div>
 

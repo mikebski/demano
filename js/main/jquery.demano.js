@@ -15,29 +15,19 @@
 */
 
 (function($) {
-    var filter_definitions = {};
-    var filter_class;
-    var filterable_class;
-    var attribute_name;
-    var value_name;
-    var group_name;
-    var toggle_class_matched;
-    var toggle_class_nomatched;
-    var root_element;
-    var debug_element_id;
-
     var registerListeners = function() {
-        $("." + filter_class).on("click", doFilter);
+        $("." + this.settings.filter_class).on("click", $.proxy(doFilter, this));
     };
 
     var doFilter = function() {
-        filter_definitions = {};
-        $('.' + filter_class).each(function(i) {
+        var filter_definitions = {};
+        var element = this;
+        $(element).find('.' + this.settings.filter_class).each(function(i) {
             var filter = $(this);
             if (filter.prop("checked")) {
-                var attribute = filter.data(attribute_name);
-                var value = filter.data(value_name);
-                var group = filter.data(group_name);
+                var attribute = filter.data(element.settings.attribute_name);
+                var value = filter.data(element.settings.value_name);
+                var group = filter.data(element.settings.group_name);
                 var filter_string = "[data-" + attribute + "='" + value + "']";
                 if (typeof filter_definitions[group] === "undefined") {
                     filter_definitions[group] = filter_string;
@@ -46,32 +36,34 @@
                 }
             }
         });
-        var all = root_element.find('.' + filterable_class);
+        var all = $(element).find('.' + element.settings.filterable_class);
         $.each(filter_definitions, function(k, v) {
             all = $(all).filter(v);
         });
 
-        $("." + filterable_class).removeClass(toggle_class_matched);
-        $("." + filterable_class).addClass(toggle_class_nomatched);
+        $(element).find("." + element.settings.filterable_class).removeClass(element.settings.toggle_class_matched);
+        $(element).find("." + element.settings.filterable_class).addClass(element.settings.toggle_class_nomatched);
 
-        $(all).removeClass(toggle_class_nomatched);
-        $(all).addClass(toggle_class_matched);
-        $("#" + debug_element_id).html(JSON.stringify(filter_definitions));
+        $(all).removeClass(element.settings.toggle_class_nomatched);
+        $(all).addClass(element.settings.toggle_class_matched);
+        $(element).find("#" + element.settings.debug_element_id).html(JSON.stringify(filter_definitions));
     }
 
     $.fn.demano = function(config) {
-        root_element = this;
-        config = config || {};
-        filter_class = config.filter_class || "filter";
-        filterable_class = config.filterable_class || "filterable";
-        attribute_name = config.attribute_name || "attribute";
-        value_name = config.value_name || "value";
-        group_name = config.group_name || "group";
-        toggle_class_matched = config.toggle_class_matched || "on";
-        toggle_class_nomatched = config.toggle_class_nomatched || "off";
-        debug_element_id = config.debug_element_id || null;
-        registerListeners();
-        doFilter();
+        var defaults = {
+            filter_class: "filter",
+            filterable_class: "filterable",
+            attribute_name: "attribute",
+            value_name: "value",
+            group_name: "group",
+            toggle_class_matched: "on",
+            toggle_class_nomatched: "off",
+            debug_element_id: null,
+        };
+
+        this.settings = $.extend(defaults, config);
+        $.proxy(registerListeners, this)();
+        $.proxy(doFilter, this)();
         return this;
     };
 }(jQuery));
