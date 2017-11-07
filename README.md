@@ -34,6 +34,14 @@ That's it.
 
 ## Installation ##
 
+### NPM
+
+`npm -i jquery-plugin-filtering`
+
+Include the file `jquery-plugin-filtering/js/main/jquery.demano.js`
+
+### Bower - deprecated
+
 `bower install demano`
 
 Install however else you choose.  The only dependency is `jquery.demano.js` in the `js/main` directory of this repo.
