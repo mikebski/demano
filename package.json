@@ -1,0 +1,24 @@
+{
+  "name": "jquery-plugin-filtering",
+  "version": "1.1.2",
+  "description": "JQuery plugin for easy filtering based on CSS class and link attributes",
+  "main": "js/main/jquery.demano.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikebski/demano.git"
+  },
+  "keywords": [
+    "jquery-plugin",
+    "filtering",
+    "demano"
+  ],
+  "author": "Mike Baranski <mike.baranski@gmail.com> (https://mikeski.net)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/mikebski/demano/issues"
+  },
+  "homepage": "https://github.com/mikebski/demano#readme"
+}
