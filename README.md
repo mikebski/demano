@@ -78,7 +78,7 @@ The filter, when checked, will find all of the `filterable` elements with a matc
 	<div class="filterable" data-category="Group 1"> b </div>
 	<div class="filterable" data-category="Group 2"> c </div>
 
-See the [lcoal demo](https://jsfiddle.net/mbaranski/q2rarzfn/ "Demano Example") for an example.
+See the [local demo](https://jsfiddle.net/mbaranski/q2rarzfn/ "Demano Example") for an example.
 
 ## Configuration Options
 The following options are available.  Pass them as an object to the `demano` function, or use the (IMO) sensible default values
