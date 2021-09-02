@@ -13,3 +13,7 @@
 * Make plugin stateful
 * Update options to use extend
 * Search only in children of element
+
+1.1.4
+
+* Support space separate data attributes
