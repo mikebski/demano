@@ -28,7 +28,7 @@
                 var attribute = filter.data(element.settings.attribute_name);
                 var value = filter.data(element.settings.value_name);
                 var group = filter.data(element.settings.group_name);
-                var filter_string = "[data-" + attribute + "='" + value + "']";
+                var filter_string = "[data-" + attribute + "~='" + value + "']";
                 if (typeof filter_definitions[group] === "undefined") {
                     filter_definitions[group] = filter_string;
                 } else {
